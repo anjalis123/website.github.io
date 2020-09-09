@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+.card{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+border: none;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.card-img{
+width: 400px;
+height: 400px;
+padding: 10% 10%;
+}
+.card-img:hover{
+    transform: scale(1.07);
+
+}
+.container{
+    box-shadow:
+    0 2.8px 2.2px rgba(0,0,0,0.034),
+    0 6.7px 5.2px rgba(0,0,0,0.048),
+    0 12.6px 10px rgba(0,0,0,0.06),
+    0 22.3px 17.9px rgba(0,0,0,0.072),
+    0 41.8px 33.4px rgba(0,0,0,0.086),
+    0 100px 80px rgba(0,0,0,0.12)
+
+    ;
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 6% 0%;
+    margin-right: 1.5%;
+    
+}.container1 .btn{
+margin-bottom: 5%;
+}
+.container1{
+
+    box-shadow:
+    0 2.8px 2.2px rgba(0,0,0,0.034),
+    0 6.7px 5.2px rgba(0,0,0,0.048),
+    0 12.6px 10px rgba(0,0,0,0.06),
+    0 22.3px 17.9px rgba(0,0,0,0.072),
+    0 41.8px 33.4px rgba(0,0,0,0.086),
+    0 100px 80px rgba(0,0,0,0.12)
+
+    ;
+
+    width:32%;
+    height: 400px;
+    display: flex;
+    padding-left: 2%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 6% 0%;
+    
+}
+h1,p{
+    text-align: center;
+    margin-left: 15%;
+    font-size: 26px;
+}.set-quantity{
+    position: relative;
+
+}
+.set-quantity::after{
+    content: "(note,1 piece)";
+    width: auto;
+    height: auto;text-align: center;
+    position: absolute;
+    bottom: -20px;
+    right: 1.2rem;
+    font-size: 0.8rem;
+}
+.page-link{
+    line-height: 16px;
+    width: 45px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+@media (max-width:600px) {
+    .body{
+        flex-direction: column;
+    }
+    
+}
+.page-items input{
+    line-height: 22px;
+    width: 45px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+.page-link:focus{
+    box-shadow: none;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+    <div class="container">
+       <h1>card 4 items-</h1> 
+      <div class="card" >
+          <img src="ohhhh/1.jpg" class="card-img img-fluid" alt="">
+          <div class="card-body">
+              <div class="card-header text-center" style="font-weight: bold">
+                  Dgital Watch-Netflix
+              </div>
+              <div class="card-title"><p>Color:Black</p> </div>
+              <div class="card-title"><p>Size:M</p> </div>
+              <div class="card-title"><p>Add to Wish List</p> </div>
+            <div class="card-text "> <h2>$<span id="itemval">0.00</span><h2></h2></div> 
+            <div class="card-footer">
+
+                <ul class="pagination justify-content-end set-quantity">
+                    <li class="page-item"><button onclick="decrease('textbox','itemval')"  class="page-link">sub</button></li>
+                    <li class="page-item"><input  type=" text" name="" value="0" id="textbox" class="page-link"></input></li>
+                    <li class="page-item"><button onclick="increase('textbox','itemval')" class="page-link">add</button></li>
+
+                 </ul>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div class="card" >
+        <img src="ohhhh/2.jpeg" class="card-img" alt="">
+        <div class="card-body">
+            <div class="card-header text-center" style="font-weight: bold">
+                ipod
+            </div>
+            <div class="card-title"><p>Color:black</p>
+          
+          </div>
+          <div class="card-title"><p>Size:M</p>
+           </div>
+      
+           <div class="card-title"><p>Add to Wish List</p> </div>
+
+          <div class="card-text "> <h2>$<span id="itemval1">0.00</span><h2></h2></div> 
+          <div class="card-footer">
+
+               <ul class="pagination justify-content-end set-quantity">
+            <li class="page-item"><button onclick="decrease('textbox1','itemval1')"  class="page-link">sub</button></li>
+            <li class="page-item"><input  type=" text" name="" value="0" id="textbox1" class="page-link"></input></li>
+            <li class="page-item"><button onclick="increase('textbox1','itemval1')" class="page-link">add</button></li>
+
+         </ul>
+        </div>
+        </div>
+    </div>
+    <hr>
+
+<div class="card" >
+        <img src="ohhhh/4.jpeg" class="card-img" alt="">
+        <div class="card-body">
+            <div class="card-header text-center" style="font-weight: bold">
+                Watch!!
+            </div>
+            <div class="card-title"><p>Color:black</p>
+          
+          </div>
+          <div class="card-title"><p>Size:M</p>
+           </div>
+           <div class="card-title"><p>Add to Wish List</p> </div>
+
+          <div class="card-text ">
+            <h2>$<span id="itemval2">0.00</span><h2>
+          </div> 
+          <div class="card-footer">
+
+            <ul class="pagination justify-content-end set-quantity">
+                <li class="page-item"><button onclick="decrease('textbox2','itemval2')"  class="page-link">sub</button></li>
+                <li class="page-item"><input  type=" text" name="" value="0" id="textbox2" class="page-link"></input></li>
+                <li class="page-item"><button onclick="increase('textbox2','itemval2')" class="page-link">add</button></li>
+
+             </ul>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="card" >
+        <img src="ohhhh/3.jpeg" class="card-img" alt="">
+        <div class="card-body">
+            <div class="card-header text-center" style="font-weight: bold">
+                Earphone-brand
+            </div>
+            <div class="card-title"><p>Color:black</p>
+          
+          </div>
+          <div class="card-title"><p>Size:M</p>
+           </div>
+           <div class="card-title"><p>Add to Wish List</p> </div>
+
+          <div class="card-text ">
+            <h2>$ <span id="itemval3">0.00</span><h2>
+          </div> 
+          <div class="card-footer">
+            <ul class="pagination justify-content-end set-quantity">
+                <li class="page-item"><button onclick="decrease('textbox3','itemval3')"  class="page-link">sub</button></li>
+                <li class="page-item"><input  type=" text" name="" value="0" id="textbox3" class="page-link"></input></li>
+                <li class="page-item"><button onclick="increase('textbox3','itemval3')" class="page-link">add</button></li>
+    
+             </ul>
+          </div>
+        </div>
+    </div>
+    <hr>
+    </div>
+    
+
+<div class="container1">
+   <h3>the total amount of</h3>
+   <div class="lr">
+       <pre>product-amount          $ <span id="product_amount">0.00</span> </pre>  
+       <pre>shipping-charge          $ <span id="shipping_charge">50,00</span> </pre>  
+
+   </div>
+   <hr>
+   <pre></pre>
+   <h5>total amount including VST        $<span id="total_amount">0.00</span></h5 ></pre>
+
+    <button onclick="check()"  id="show" class="btn btn-primary">CheckOut</button>
+<h5>**expected delivery Date 12-july-2020 to 27-july-2020**</h5>
+</div>
+</div>
+<script>
+    var product_amount=document.getElementById('product_amount');
+    var total_amount=document.getElementById('total_amount');
+    var shipping_charge=document.getElementById('shipping_charge');
+
+    const decrease=(incdec,itemprice)=>{
+        var val=document.getElementById(incdec);
+        var itemprice=document.getElementById(itemprice);
+
+        console.log(val);
+
+        if(val.value<=0){
+            val.value=0;
+        }
+        else{
+            val.value=parseInt(val.value) - 1;
+        val.style.background='blue';
+            val.style.color='white';
+            itemprice.innerHTML=parseInt(itemprice.innerHTML) - 100;
+            product_amount.innerHTML=parseInt(product_amount.innerHTML) - 100;
+         total_amount.innerHTML=parseInt(shipping_charge.innerHTML)+parseInt(product_amount.innerHTML);
+
+        }
+
+    }
+    const increase=(incdec,itemprice)=>{
+        var val=document.getElementById(incdec);
+        var itemprice=document.getElementById(itemprice);
+
+
+        console.log(val);
+        if(val.value>=7){
+            val.value=7;
+            val.style.background='red';
+            val.style.color='white';
+            alert("maximum 7 allowded");
+
+        }
+        else{
+            val.value=parseInt(val.value)+1;
+
+            itemprice.innerHTML=parseInt(itemprice.innerHTML) + 100;
+            product_amount.innerHTML=parseInt(product_amount.innerHTML) + 100;
+            total_amount.innerHTML=parseInt(shipping_charge.innerHTML)+parseInt(product_amount.innerHTML);
+
+
+        }
+
+    }
+  
+</script>
+</body>
+</html>
